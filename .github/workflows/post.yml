@@ -2,6 +2,7 @@ name: Amazon Deals Bot
 
 on:
   workflow_dispatch:
+
   schedule:
     - cron: "0 */2 * * *"
 
