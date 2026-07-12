@@ -5,7 +5,6 @@ permissions:
 
 on:
   workflow_dispatch:
-
   schedule:
     - cron: "0 */2 * * *"
 
@@ -20,9 +19,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - env:
+      - name: Run bot
+        env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
         run: python main.py
@@ -31,9 +32,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-
           git add posts.json
-
           git diff --cached --quiet || git commit -m "Update posted products"
-
           git push
