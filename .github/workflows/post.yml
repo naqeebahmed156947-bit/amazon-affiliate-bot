@@ -1,9 +1,9 @@
 name: Amazon Deals Bot
 
 on:
-  schedule:
-    - cron: "0 * * * *"
   workflow_dispatch:
+  schedule:
+    - cron: "0 */2 * * *"
 
 jobs:
   main:
@@ -21,4 +21,5 @@ jobs:
       - env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
+
         run: python main.py
