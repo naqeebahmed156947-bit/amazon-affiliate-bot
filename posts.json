@@ -1,102 +1,103 @@
 [
-  {
-    "name": "شاحن Anker 20W USB-C",
-    "url": "https://link.amazon/B07A2jxTr ",
-    "posted": false
-  },
-  {
-    "name": "باور بانك Anker 10000mAh",
-    "url": " https://link.amazon/B0gaHZ7yM",
-    "posted": false
-  },
-  {
-    "name": "كابل Anker USB-C",
-    "url": "  https://link.amazon/B01JREV4l",
-    "posted": false
-  },
-  {
-    "name": "سماعة Soundcore Bluetooth",
-    "url": " https://link.amazon/B05cd2ogB",
-    "posted": false
-  },
-  {
-    "name": "ماوس Logitech لاسلكي",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "كيبورد Logitech لاسلكي",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "فلاشة SanDisk 128GB",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "هارد Seagate 1TB",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "SSD خارجي",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "جراب Samsung Galaxy",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "لاصقة حماية شاشة",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "حامل موبايل للسيارة",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "شاحن سيارة سريع",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "وصلة HDMI",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "سماعات أذن لاسلكية",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "حامل لابتوب",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "كاميرا ويب HD",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "ميكروفون USB",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "موزع USB Hub",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  },
-  {
-    "name": "منظم كابلات",
-    "url": "ضع رابط الأفلييت هنا",
-    "posted": false
-  }
+    {
+        "name": "شاحن Anker 20W USB-C",
+        "url": "https://link.amazon/B07A2jxTr ",
+        "posted": true,
+        "last_post": "2026-07-12 07:07:08.583026"
+    },
+    {
+        "name": "باور بانك Anker 10000mAh",
+        "url": " https://link.amazon/B0gaHZ7yM",
+        "posted": false
+    },
+    {
+        "name": "كابل Anker USB-C",
+        "url": "  https://link.amazon/B01JREV4l",
+        "posted": false
+    },
+    {
+        "name": "سماعة Soundcore Bluetooth",
+        "url": " https://link.amazon/B05cd2ogB",
+        "posted": false
+    },
+    {
+        "name": "ماوس Logitech لاسلكي",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "كيبورد Logitech لاسلكي",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "فلاشة SanDisk 128GB",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "هارد Seagate 1TB",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "SSD خارجي",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "جراب Samsung Galaxy",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "لاصقة حماية شاشة",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "حامل موبايل للسيارة",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "شاحن سيارة سريع",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "وصلة HDMI",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "سماعات أذن لاسلكية",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "حامل لابتوب",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "كاميرا ويب HD",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "ميكروفون USB",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "موزع USB Hub",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    },
+    {
+        "name": "منظم كابلات",
+        "url": "ضع رابط الأفلييت هنا",
+        "posted": false
+    }
 ]
