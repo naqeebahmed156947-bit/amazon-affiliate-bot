@@ -1,5 +1,8 @@
 name: Amazon Deals Bot
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
 
@@ -24,3 +27,13 @@ jobs:
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
 
         run: python main.py
+              - name: Commit updated posts.json
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+          git add posts.json
+
+          git diff --cached --quiet || git commit -m "Update posted products"
+
+          git push
