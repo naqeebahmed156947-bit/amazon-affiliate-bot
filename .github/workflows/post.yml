@@ -25,9 +25,9 @@ jobs:
       - env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
-
         run: python main.py
-        - name: Commit updated posts.json
+
+      - name: Commit updated posts.json
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
