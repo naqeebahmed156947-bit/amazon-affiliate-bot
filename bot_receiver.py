@@ -1,7 +1,12 @@
 import os
-import json
 from telegram import Update
-from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
+from telegram.ext import (
+    Application,
+    CommandHandler,
+    MessageHandler,
+    ContextTypes,
+    filters,
+)
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
 
@@ -11,38 +16,57 @@ if not TOKEN:
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "أهلاً 👋\n"
-        "أرسل رابط منتج أمازون لإضافته للقائمة."
+        "🤖 أهلاً بك في Amazon Affiliate Bot Pro\n\n"
+        "📩 أرسل رابط منتج أمازون (Affiliate Link)\n"
+        "وسأقوم بجلب بيانات المنتج ونشره في القناة."
     )
 
 
 async def add_product(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    url = update.message.text.strip()
+    text = update.message.text.strip()
 
-    products = []
+    # التأكد أن الرسالة عبارة عن رابط أمازون
+    if "amazon." not in text and "amzn.to" not in text:
+        await update.message.reply_text(
+            "❌ أرسل رابط أمازون أو رابط الأفلييت فقط."
+        )
+        return
 
-    if os.path.exists("posts.json"):
-        with open("posts.json", "r", encoding="utf-8") as f:
-            products = json.load(f)
-
-    products.append({
-        "name": "منتج جديد",
-        "url": url,
-        "posted": False
-    })
-
-    with open("posts.json", "w", encoding="utf-8") as f:
-        json.dump(products, f, ensure_ascii=False, indent=4)
+    print(f"New Amazon Link: {text}")
 
     await update.message.reply_text(
-        "✅ تم إضافة المنتج بنجاح"
+        "✅ تم استلام الرابط.\n\n"
+        "⏳ جاري استخراج بيانات المنتج..."
+    )
+
+    # المرحلة القادمة:
+    # 1- استخراج بيانات المنتج
+    # 2- جلب الصورة والسعر
+    # 3- النشر في القناة
+
+
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "الأوامر المتاحة:\n\n"
+        "/start - تشغيل البوت\n"
+        "/help - المساعدة\n\n"
+        "ثم أرسل رابط منتج أمازون."
     )
 
 
-app = Application.builder().token(TOKEN).build()
+def main():
+    app = Application.builder().token(TOKEN).build()
 
-app.add_handler(CommandHandler("start", start))
-app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, add_product))
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("help", help_command))
+    app.add_handler(
+        MessageHandler(filters.TEXT & ~filters.COMMAND, add_product)
+    )
 
-print("Bot receiver is running...")
-app.run_polling()
+    print("✅ Amazon Affiliate Bot Pro is running...")
+
+    app.run_polling()
+
+
+if __name__ == "__main__":
+    main()
